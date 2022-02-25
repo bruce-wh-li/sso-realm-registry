@@ -3,7 +3,7 @@ on:
   pull_request:
   workflow_dispatch:
 jobs:
-  brakeman:
+  scan:
     name: runner / brakeman
     runs-on: ubuntu-latest
     steps:
