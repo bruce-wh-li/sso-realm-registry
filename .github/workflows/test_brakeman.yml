@@ -1,3 +1,5 @@
+name: brakeman_scan
+on: workflow-dispatch
 uses: artplan1/brakeman-action@v1.2.1
 with:
   flags: "--color"
