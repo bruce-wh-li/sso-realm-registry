@@ -1,8 +1,14 @@
-name: brakeman_scan
+name: Brakeman Scan
 on:
+  pull_request:
+    branches: [ main, develop ]
   workflow_dispatch:
 jobs:
-  scan:
-    uses: artplan1/brakeman-action@v1.2.1
-    with:
-      flags: "--color"
+  Scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Brakeman code scanning
+        uses: standardnotes/brakeman-action@v1.0.0
+        with:
+          options: "--color -q"
