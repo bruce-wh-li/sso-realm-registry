@@ -1,0 +1,7 @@
+name: codeql-scan-demo
+on:
+  # workflow_dispatch:
+  push:
+jobs:
+  codeql-scan:
+    uses: bruce-wh-li/devsecops-tools/.github/workflows/codeql.yaml@main
